@@ -1,0 +1,24 @@
+  {"builders": [{
+     "type": "amazon-ebs",
+     "region": "us-west-2",
+     "source_ami": "ami-d94f5aa0",
+     "instance_type": "t2.micro",
+     "ssh_username": "ubuntu",
+     "ami_name": "Apache2-16jul {{timestamp}}"
+   }],
+   "provisioners": [{
+     "type": "shell",
+     "inline": [
+       "sleep 30",
+       "sudo apt-get update",
+       "sudo apt-get install -y apache2",
+       "sudo rm -rf /var/www",
+       "sudo mkdir -p /var/www/html",
+       "sudo chmod 777 /var/www/html",
+       "sudo cat > /var/www/html/index.html <<EOF",
+       "<html><body>It Worked!!</body></html>",
+       "EOF",
+       "sudo service apache2 start"
+     ]
+   }]
+ }
