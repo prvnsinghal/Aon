@@ -16,7 +16,7 @@
        "sudo mkdir -p /var/www/html",
        "sudo chmod 777 /var/www/html",
        "sudo cat > /var/www/html/index.html <<EOF",
-       "<html><body>Hello Blue</body></html>",
+       "<html><body>Hello Green</body></html>",
        "EOF",
        "sudo service apache2 start"
      ]
