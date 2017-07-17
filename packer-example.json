@@ -16,7 +16,7 @@
        "sudo mkdir -p /var/www/html",
        "sudo chmod 777 /var/www/html",
        "sudo cat > /var/www/html/index.html <<EOF",
-       "<html><body>This is a new Demo</body></html>",
+       "<html><body>Making a change for demo</body></html>",
        "EOF",
        "sudo service apache2 start"
      ]
